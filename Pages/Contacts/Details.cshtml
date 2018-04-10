@@ -65,7 +65,7 @@
        User, Model.Contact, ContactOperations.Approve)).Succeeded)
     {
         <form style="display:inline;" method="post">
-            <input type="hidden" name="id" value="@Model.Contact.ContactId" />
+            <input type="hidden" name="id" value="@Model.Contact.ContactID" />
             <input type="hidden" name="status" value="@ContactStatus.Approved" />
             <button type="submit" class="btn btn-xs btn-success">Approve</button>
         </form>
@@ -78,7 +78,7 @@
        User, Model.Contact, ContactOperations.Reject)).Succeeded)
     {
         <form style="display:inline;" method="post">
-            <input type="hidden" name="id" value="@Model.Contact.ContactId" />
+            <input type="hidden" name="id" value="@Model.Contact.ContactID" />
             <input type="hidden" name="status" value="@ContactStatus.Rejected" />
             <button type="submit" class="btn btn-xs btn-success">Reject</button>
         </form>
@@ -90,7 +90,7 @@
            User, Model.Contact,
            ContactOperations.Update)).Succeeded)
     {
-        <a asp-page="./Edit" asp-route-id="@Model.Contact.ContactId">Edit</a>
+        <a asp-page="./Edit" asp-route-id="@Model.Contact.ContactID">Edit</a>
         <text> | </text>
     }
     <a asp-page="./Index">Back to List</a>
